@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_teacherActivity">
+
+    <ImageView
+        android:id="@+id/img_view_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/private_key"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <EditText
+        android:id="@+id/edit_Text_FIN"
+        android:layout_width="311dp"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_button_white"
+        android:ems="10"
+        android:hint="FIN"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textColorHint="#4D019782"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_view_log"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <ImageView
+        android:id="@+id/img_view_FIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_credit_card_24"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_Text_FIN"
+        app:layout_constraintEnd_toEndOf="@+id/edit_Text_FIN"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/edit_Text_FIN"
+        app:layout_constraintTop_toTopOf="@+id/edit_Text_FIN" />
+
+    <EditText
+        android:id="@+id/edit_Text_Pass"
+        android:layout_width="311dp"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_button_white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textColorHint="#4D019782"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Text_FIN"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <ImageView
+        android:id="@+id/img_view_Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_lock_24"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_Text_Pass"
+        app:layout_constraintEnd_toEndOf="@+id/edit_Text_Pass"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="@+id/edit_Text_Pass"
+        app:layout_constraintTop_toTopOf="@+id/edit_Text_Pass"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="311dp"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/tajawal_medium"
+        android:text="LOG IN"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Text_Pass"
+        app:layout_constraintVertical_bias="0.174" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

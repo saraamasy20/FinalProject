@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Learn easily</string>
+    <string name="course1">Java</string>
+    <string name="course2">Pithon</string>
+    <string name="pdf1">Chapter03-image.pdf</string>
+    <string name="assignment">Assignment 1</string>
+
+
+</resources>
