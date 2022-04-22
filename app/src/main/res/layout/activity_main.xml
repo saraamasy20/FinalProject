@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn_student_main"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_button"
@@ -79,7 +79,7 @@
         app:srcCompat="@drawable/teacher" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_teacher_main"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_button"

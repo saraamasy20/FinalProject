@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/custom_button.xml" value="0.1745" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.145" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.145" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_assignment.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_courses.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_pdf.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_add_video.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_assignment_edites.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_details_assignment.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_edites_ass.xml" value="0.23177083333333334" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_home_teacher.xml" value="0.264" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_login_teach.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_rc_assignment.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_rc_cources.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_rc_pdf.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_rc_video.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_signup_teach.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_task_of_courses.xml" value="0.25" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/item_assignment.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/Jamal2000/AndroidStudioProjects/FinalProject/app/src/main/res/layout/no_thing.xml" value="0.25" />
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/drawable/custom_button.xml" value="0.2203125" />
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/drawable/custom_button_circel.xml" value="0.2203125" />

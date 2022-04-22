@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "219299487328",
+    "project_id": "learn-easily-2cf49",
+    "storage_bucket": "learn-easily-2cf49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219299487328:android:89e6934741513adfb0ad05",
+        "android_client_info": {
+          "package_name": "com.example.learneasily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219299487328-95s8ph46i8dmmvnjtm3cddth3shpm8j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApnSvLfOnJnG-quWsUv9I8fzbBfm3obqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219299487328-95s8ph46i8dmmvnjtm3cddth3shpm8j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

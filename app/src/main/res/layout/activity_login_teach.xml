@@ -25,6 +25,7 @@
         android:background="@drawable/custom_button_white"
         android:ems="10"
         android:hint="FIN"
+        android:inputType="textEmailAddress"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:textColorHint="#4D019782"
@@ -78,7 +79,7 @@
         app:layout_constraintVertical_bias="0.541" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/login_teacher"
         android:layout_width="311dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_button"

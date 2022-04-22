@@ -4,7 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add.Add_AssignmentActivity">
+    tools:context=".edite.Assignment_edites">
+
+    <Button
+        android:id="@+id/btn_edit_name_course"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/tajawal_medium"
+        android:text="Updates course"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/img_viwe_add_Assignment"
@@ -20,23 +36,24 @@
 
 
     <EditText
-        android:id="@+id/edit_add_name"
+        android:id="@+id/edit_name"
         android:layout_width="314dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:alpha="0.5"
         android:ems="10"
         android:fontFamily="@font/tajawal_medium"
         android:hint="Add New Assignment Name"
         android:inputType="textPersonName"
         android:textColorHint="@color/bluegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_viwe_add_Assignment" />
+        app:layout_constraintTop_toBottomOf="@+id/img_viwe_add_Assignment"
+        app:layout_constraintVertical_bias="0.084" />
 
     <EditText
-        android:id="@+id/edit_add_description"
+        android:id="@+id/edit_description"
         android:layout_width="314dp"
         android:layout_height="wrap_content"
         android:alpha="0.5"
@@ -49,26 +66,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_add_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name"
         app:layout_constraintVertical_bias="0.052" />
 
-
-    <Button
-        android:id="@+id/btn_add_new_ass"
-        android:layout_width="314dp"
-        android:layout_height="48dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/tajawal_medium"
-        android:text="Add New Assignment"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_View_select_file"
-        app:layout_constraintVertical_bias="0.14" />
 
     <TextView
         android:id="@+id/text_View_select_file"
@@ -97,7 +97,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_add_file"
         app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_add_description"
+        app:layout_constraintTop_toBottomOf="@+id/edit_description"
         app:layout_constraintVertical_bias="0.069" />
 
     <Button
@@ -109,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_add_description"
+        app:layout_constraintTop_toBottomOf="@+id/edit_description"
         app:layout_constraintVertical_bias="0.104" />
 
 
