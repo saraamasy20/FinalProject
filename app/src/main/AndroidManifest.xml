@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.learneasily">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.LearnEasily">
+        <activity
+            android:name=".edite.Video_edites"
+            android:exported="false" />
+        <activity
+            android:name=".edite.Pdf_edites"
+            android:exported="false" />
+        <activity
+            android:name=".edite.Assignment_edites"
+            android:exported="false" />
+        <activity
+            android:name=".Add.details_AssignmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Rc.Rc_AssignmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Add.Add_AssignmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Add.Add_videoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Add.Add_pdfActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Rc.Rc_VideoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Rc.Rc_PdfActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Task_of_CoursesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Add.Add_coursesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Rc.Rc_courcesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Signup_teacherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Login_teacherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
