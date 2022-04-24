@@ -19,6 +19,7 @@ import com.example.learneasily.Add.Add_coursesActivity;
 import com.example.learneasily.R;
 import com.example.learneasily.models.assignmint;
 import com.example.learneasily.models.courses;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -43,7 +44,7 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
 
       //  setTitle("Courses");
         db =  FirebaseFirestore.getInstance();
-        ass_add = findViewById(R.id.add_cource);
+        ass_add = findViewById(R.id.add_ass);
 
         ass_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +73,9 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
 
     }
     private void Display_Assigniment() {
+        String uid = FirebaseAuth.getInstance().getUid();
 
-        db.collection("assignments").orderBy("name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+        db.collection("courses").document(uid).collection("assignments").orderBy("name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
 
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {

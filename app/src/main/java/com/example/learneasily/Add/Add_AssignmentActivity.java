@@ -2,6 +2,7 @@ package com.example.learneasily.Add;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.learneasily.R;
+import com.example.learneasily.Rc.Rc_AssignmentActivity;
+import com.example.learneasily.Rc.Rc_PdfActivity;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -40,6 +43,8 @@ public class Add_AssignmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 add_assignment(name_ass ,descriptions_ass ) ;
+                Intent intent = new Intent(Add_AssignmentActivity.this , Rc_AssignmentActivity.class);
+                startActivity(intent);
             }
         });
 

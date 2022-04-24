@@ -37,8 +37,11 @@
              android:id="@+id/text_view_video"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
+             android:layout_marginStart="5dp"
+             android:layout_marginTop="5dp"
+             android:layout_marginEnd="5dp"
+             android:layout_marginBottom="5dp"
              android:fontFamily="@font/tajawal_medium"
-             android:layout_margin="5dp"
              android:text="Lecture 1: How to use grid"
              android:textColor="@color/bluegreen"
              android:textSize="20sp" />

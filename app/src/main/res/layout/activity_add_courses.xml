@@ -12,17 +12,17 @@
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_button"
-        android:text="Add New course"
         android:fontFamily="@font/tajawal_medium"
-        android:textColor="@color/white"
+        android:text="Add New course"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_course_name"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <EditText
         android:id="@+id/edit_text_course_name"
@@ -40,6 +40,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.388" />
+
+    <EditText
+        android:id="@+id/edit_text_descrption"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:ems="10"
+        android:fontFamily="@font/tajawal_medium"
+        android:hint="Add Decription Course"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/bluegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_view_add_cource"

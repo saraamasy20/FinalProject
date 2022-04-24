@@ -65,10 +65,12 @@ public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHo
     public  class  ViewHolder extends  RecyclerView.ViewHolder {
 
         public TextView name_cource ;
+        public TextView name_description ;
         public ImageView profile_image ;
         public ViewHolder( View item_view){
             super(item_view);
             name_cource = item_view.findViewById(R.id.name_course);
+            name_description = item_view.findViewById(R.id.name_description);
             //profile_image =item_view.findViewById(R.id.avatar);
         }
 
