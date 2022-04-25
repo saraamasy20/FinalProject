@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.learneasily.Adapter.Assignment_adapter;
 import com.example.learneasily.Adapter.Courses_adapter;
@@ -19,6 +20,7 @@ import com.example.learneasily.Add.Add_coursesActivity;
 import com.example.learneasily.R;
 import com.example.learneasily.models.assignmint;
 import com.example.learneasily.models.courses;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentChange;
@@ -30,6 +32,8 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Rc_AssignmentActivity extends AppCompatActivity {
     RecyclerView rv;
@@ -45,21 +49,22 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rc_assignment);
 
       //  setTitle("Courses");
-        db =  FirebaseFirestore.getInstance();
+         db =  FirebaseFirestore.getInstance();
         ass_add = findViewById(R.id.add_ass);
 
         ass_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Rc_AssignmentActivity.this , Add_AssignmentActivity.class);
+                intent.putExtra("idadd",getIntent().getStringExtra("idt"));
                 startActivity(intent);
             }
         });
-
         PD = new ProgressDialog(this);
         PD.setCancelable(false);
         PD.setMessage("Please Wait The Information.... :)");
         PD.show();
+
         rv = findViewById(R.id.rc_ass);
         // جعل الريسايكل الفيو الغرض تبعها ثابت
         rv.setHasFixedSize(true);
@@ -76,9 +81,10 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
     }
     private void Display_Assigniment() {
     String uid = FirebaseFirestore.getInstance().collection("courses").getId();
+        String idt=getIntent().getStringExtra("idt");
+        Toast.makeText(this,idt,Toast.LENGTH_SHORT).show();
 
-        DocumentReference dref=db.collection("courses").document();
-        dref.collection("assignments").orderBy("name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+db.collection("courses").document(idt).collection("assignments").orderBy("name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
 
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
@@ -103,7 +109,5 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }

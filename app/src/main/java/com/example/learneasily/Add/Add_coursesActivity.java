@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.learneasily.R;
 import com.example.learneasily.Rc.Rc_AssignmentActivity;
 import com.example.learneasily.Rc.Rc_courcesActivity;
+import com.example.learneasily.Task_of_CoursesActivity;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -61,13 +62,14 @@ public class Add_coursesActivity extends AppCompatActivity {
         info.put("id" , id);
         info.put("description" , description);
 
-        CollectionReference course= db.collection("courses");
-        course.add(info).addOnSuccessListener(documentReference ->
+       db.collection("courses")
+       .add(info).addOnSuccessListener(documentReference ->
 
         {
-            Intent i=new Intent(Add_coursesActivity.this, Rc_AssignmentActivity.class);
-            i.putExtra("idcourse",documentReference.getId());
-startActivity(i);
+//            Toast.makeText(Add_coursesActivity.this ,documentReference.getId(),Toast.LENGTH_SHORT).show();
+//            Intent i=new Intent(Add_coursesActivity.this, Task_of_CoursesActivity.class);
+//            i.putExtra("idcourse",documentReference.getId());
+//startActivity(i);
            // db.collection("courses").document().collection();
            // db.collection("courses").document().collection();
             ///db.collection("courses").document().collection();

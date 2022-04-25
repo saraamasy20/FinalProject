@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.learneasily.Adapter.Courses_adapter;
 import com.example.learneasily.Add.Add_AssignmentActivity;
@@ -22,6 +23,7 @@ import com.example.learneasily.Signup_teacherActivity;
 import com.example.learneasily.edite.Assignment_edites;
 import com.example.learneasily.models.courses;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
@@ -42,10 +44,13 @@ public class Rc_courcesActivity extends AppCompatActivity {
 
     RecyclerView rv;
     FirebaseFirestore db;
+    TextView name_course;
     ProgressDialog PD;
     Courses_adapter adapter;
     ArrayList<courses> items;
-    Button cource_add , course_edite;
+    Button cource_add , delete;
+
+
 
 
     @Override
@@ -54,7 +59,9 @@ public class Rc_courcesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rc_cources);
 
         setTitle("Courses");
+delete=findViewById(R.id.btn_delete);
         db =  FirebaseFirestore.getInstance();
+        name_course=findViewById(R.id.name_course);
         cource_add = findViewById(R.id.add_cource);
 
 
@@ -99,8 +106,15 @@ public class Rc_courcesActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
         Display_Courses();
+        DeleteCourse();
 
-
+//      delete.setOnClickListener((v)->{
+//
+//
+//
+//              DeleteCourse();
+//
+//      });
     }
     private void Display_Courses() {
 
@@ -132,4 +146,19 @@ public class Rc_courcesActivity extends AppCompatActivity {
 
 
     }
+    private void DeleteCourse(){
+        adapter.setOnItemClckListener(new Courses_adapter.OnItemClickListener() {
+           @Override
+   public void onItemClick(int position) {
+  }
+     @Override
+    public void onDeleteClick(int position) {
+         items.remove(position);
+         adapter.notifyItemRemoved(position);
+   }
+        }
+
+        );
+    }
+
 }

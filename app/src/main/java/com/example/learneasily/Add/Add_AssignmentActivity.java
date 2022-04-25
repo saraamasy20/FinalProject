@@ -15,6 +15,7 @@ import com.example.learneasily.R;
 import com.example.learneasily.Rc.Rc_AssignmentActivity;
 import com.example.learneasily.Rc.Rc_PdfActivity;
 import com.example.learneasily.Rc.Rc_courcesActivity;
+import com.example.learneasily.models.courses;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -24,14 +25,14 @@ public class Add_AssignmentActivity extends AppCompatActivity {
     FirebaseFirestore db ;
     EditText name_ass , descriptions_ass ;
     Button add_ass ;
-
+    courses course;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_assignment);
 
 
-
+course =new courses();
         db = FirebaseFirestore.getInstance();
         name_ass =findViewById(R.id.edit_add_name);
         descriptions_ass =findViewById(R.id.edit_add_description);
@@ -67,7 +68,8 @@ public class Add_AssignmentActivity extends AppCompatActivity {
         info_ass.put("description" , desecription);
 
 
-        String uid =db.collection("courses").getId();
+        String uid =
+        getIntent().getStringExtra("idadd");
         db.collection("courses").document(uid).collection("assignments").add(info_ass).addOnSuccessListener(documentReference ->
         {
 
