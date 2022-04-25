@@ -58,12 +58,16 @@
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/layout/grid_video.xml" value="0.22" />
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/layout/no_thing.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mobiz/AndroidStudioProjects/Learneasily/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1125" />
+        <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.142" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_add_courses.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_add_video.xml" value="0.1" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_home_teacher.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_rc_assignment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_rc_cources.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_rc_video.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/activity_task_of_courses.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/item_assignment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tsc/AndroidStudioProjects/FinalProject-main/app/src/main/res/layout/item_video.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

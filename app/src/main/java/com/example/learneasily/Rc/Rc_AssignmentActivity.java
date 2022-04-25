@@ -17,6 +17,7 @@ import com.example.learneasily.Adapter.Assignment_adapter;
 import com.example.learneasily.Adapter.Courses_adapter;
 import com.example.learneasily.Add.Add_AssignmentActivity;
 import com.example.learneasily.Add.Add_coursesActivity;
+import com.example.learneasily.Add.Add_videoActivity;
 import com.example.learneasily.R;
 import com.example.learneasily.models.assignmint;
 import com.example.learneasily.models.courses;
@@ -56,6 +57,7 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Rc_AssignmentActivity.this , Add_AssignmentActivity.class);
+                //على الid  تبع الكورس الي انبعتلك من الريسايكل ضيفيلي واجب
                 intent.putExtra("idadd",getIntent().getStringExtra("idt"));
                 startActivity(intent);
             }
@@ -82,7 +84,7 @@ public class Rc_AssignmentActivity extends AppCompatActivity {
     private void Display_Assigniment() {
     String uid = FirebaseFirestore.getInstance().collection("courses").getId();
         String idt=getIntent().getStringExtra("idt");
-        Toast.makeText(this,idt,Toast.LENGTH_SHORT).show();
+
 
 db.collection("courses").document(idt).collection("assignments").orderBy("name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -94,6 +96,11 @@ db.collection("courses").document(idt).collection("assignments").orderBy("name",
                         PD.dismiss();
                     Log.e("FireBase" , e.getMessage());
                     return;
+                }else{
+                    Intent intent = new Intent(Rc_AssignmentActivity.this , Add_AssignmentActivity.class);
+                    //على الid  تبع الكورس الي انبعتلك من الريسايكل ضيفيلي واجب
+                    intent.putExtra("idadd",getIntent().getStringExtra("idt"));
+                    startActivity(intent);
                 }
 
                 for (DocumentChange dc : queryDocumentSnapshots.getDocumentChanges()){

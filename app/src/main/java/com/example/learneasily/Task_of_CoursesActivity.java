@@ -36,11 +36,12 @@ Button ass , pdf , video;
         ass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//idfor is the id or the number of the course
                 db.collection("courses").whereEqualTo("id",idfor).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         Intent intent = new Intent(Task_of_CoursesActivity.this , Rc_AssignmentActivity.class);
+                        //idt is the uid of the course
                         Intent idt= intent.putExtra("idt",queryDocumentSnapshots.getDocuments().get(0).getId());
                         Toast.makeText(Task_of_CoursesActivity.this,queryDocumentSnapshots.getDocuments().get(0).getId(),Toast.LENGTH_SHORT).show();
 
@@ -62,8 +63,17 @@ Button ass , pdf , video;
         video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Task_of_CoursesActivity.this , Rc_VideoActivity.class);
-                startActivity(intent);
+                db.collection("courses").whereEqualTo("id",idfor).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        Intent intent = new Intent(Task_of_CoursesActivity.this , Rc_VideoActivity.class);
+                        //idt is the uid of the course
+                        Intent idt= intent.putExtra("idt",queryDocumentSnapshots.getDocuments().get(0).getId());
+                        Toast.makeText(Task_of_CoursesActivity.this,queryDocumentSnapshots.getDocuments().get(0).getId(),Toast.LENGTH_SHORT).show();
+
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
