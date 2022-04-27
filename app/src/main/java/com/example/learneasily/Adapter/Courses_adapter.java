@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,15 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learneasily.R;
 import com.example.learneasily.Task_of_CoursesActivity;
-import com.example.learneasily.edite.Assignment_edites;
-import com.example.learneasily.edite.Cource_edit;
 import com.example.learneasily.models.courses;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHolder> {
 
@@ -34,7 +29,6 @@ public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHo
     private ArrayList<courses> list_cources ;
     private OnItemClickListener mListener;
     private int  mAdapter_position;
-    private Cource_edit mCourses;
     public interface OnItemClickListener{
         void  onItemClick(int position);
         void onDeleteClick(int position);
@@ -103,7 +97,6 @@ public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHo
             name_description = item_view.findViewById(R.id.name_description);
             name_id =item_view.findViewById(R.id.course_id);
             btn_delete=item_view.findViewById(R.id.btn_delete);
-            btn_edit_cource = item_view.findViewById(R.id.btn_edit_cource);
             item_view.setOnClickListener((v)-> {
              if(listener !=null){
               int position=getAdapterPosition();
@@ -113,31 +106,6 @@ public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHo
                     }
             });
 
-            btn_edit_cource.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    db =  FirebaseFirestore.getInstance();
-                    if(listener !=null){
-                        db.collection("courses").whereEqualTo("name",name_course).get()
-                                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                    @Override
-                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                        Context context = view.getContext();
-                                        Intent intent = new Intent(context , Cource_edit.class);
-                                        Intent course_name = intent.putExtra("course_name" , String.valueOf(name_course));
-                                        Intent course_description = intent.putExtra("course_description" , String.valueOf(name_description));
-                                        Intent course_id = intent.putExtra("course_id" , String.valueOf(name_id));
-
-                                        context.startActivity(intent);
-
-
-                                    }
-                                });
-                    }
-
-
-                }
-            });
 
    btn_delete.setOnClickListener(new View.OnClickListener() {
     @Override

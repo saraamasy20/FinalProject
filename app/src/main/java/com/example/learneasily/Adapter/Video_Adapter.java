@@ -1,23 +1,19 @@
 package com.example.learneasily.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learneasily.R;
-import com.example.learneasily.edite.Video_edites;
 import com.example.learneasily.models.videos;
 
 import java.util.ArrayList;

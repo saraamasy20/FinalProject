@@ -29,10 +29,10 @@ public class Assignment_edites extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignment_edites);
         db = FirebaseFirestore.getInstance();
-        name_ass =findViewById(R.id.edit_name);
-        names_of_ass = findViewById(R.id.name_of_ass);
-        descriptions_ass =findViewById(R.id.edit_description);
-        edit_ass = findViewById(R.id.btn_edit_name_course);
+        name_ass =findViewById(R.id.edit_text_course_name);
+        names_of_ass = findViewById(R.id.edit_name_ass);
+        descriptions_ass =findViewById(R.id.edit_description_ass);
+        edit_ass = findViewById(R.id.btn_edit_name_ass);
 
         edit_ass.setOnClickListener(new View.OnClickListener() {
             @Override

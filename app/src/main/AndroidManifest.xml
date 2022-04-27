@@ -15,12 +15,6 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.LearnEasily">
         <activity
-            android:name=".edite.Cource_edit"
-            android:exported="false" />
-        <activity
-            android:name=".edite.Video_edites"
-            android:exported="false" />
-        <activity
             android:name=".edite.Pdf_edites"
             android:exported="false" />
         <activity

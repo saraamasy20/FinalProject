@@ -93,13 +93,6 @@
 
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/btn_edit_cource"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
-                    android:background="@drawable/ic_baseline_edit_24" />
-
 
             </LinearLayout>
 

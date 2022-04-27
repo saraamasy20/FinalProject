@@ -13,7 +13,7 @@
         android:layout_marginBottom="164dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/tajawal_medium"
-        android:text="Updates course"
+        android:text="Updates Assignment"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20dp"

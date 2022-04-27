@@ -59,6 +59,8 @@ private Uri videoUri=null;
         videoView=findViewById(R.id.videoView);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Upload file....");
+
+
 uploadVideo.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
