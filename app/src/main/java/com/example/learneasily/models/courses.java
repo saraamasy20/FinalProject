@@ -4,7 +4,7 @@ public class courses {
 
     String name ;
     String description ;
-    String id;
+  public  String id;
 
     public String getId() {
         return id;

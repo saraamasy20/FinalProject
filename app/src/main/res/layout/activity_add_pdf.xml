@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/plus" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/upload_pdf"
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:background="@drawable/custom_button"
@@ -33,41 +33,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_View_select"
+        app:layout_constraintTop_toBottomOf="@+id/pdf_name"
         app:layout_constraintVertical_bias="0.168" />
 
-    <TextView
-        android:id="@+id/text_View_choose"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:fontFamily="@font/tajawal_medium"
-        android:text="Add New PDF File"
-        android:textColor="@color/greenawi"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_viwe_add_pdf"
-        app:layout_constraintVertical_bias="0.201" />
 
-    <TextView
-        android:id="@+id/text_View_select"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pdf_name"
+        android:layout_width="224dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="344dp"
         android:fontFamily="@font/tajawal_medium"
         android:hint="No Selected"
         android:textColorHint="#4D019782"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/add_pdf"
         app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_View_choose"
-        app:layout_constraintVertical_bias="0.03" />
+
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/add_pdf"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/ic_baseline_add_circle_24"

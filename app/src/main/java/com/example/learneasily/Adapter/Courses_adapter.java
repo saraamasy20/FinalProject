@@ -25,12 +25,12 @@ import java.util.List;
 
 public class Courses_adapter extends RecyclerView.Adapter<Courses_adapter.ViewHolder> {
 
+    private OnItemClickListener mListener;
 
     FirebaseFirestore db;
     TextView name_course;
     private Context context ;
     private ArrayList<courses> list_cources ;
-    private OnItemClickListener mListener;
     public interface OnItemClickListener{
         void  onItemClick(int position);
         void onDeleteClick(int position);

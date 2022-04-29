@@ -112,7 +112,6 @@ public class Rc_VideoActivity extends AppCompatActivity {
                         Log.d("test" , String.valueOf(dc.getDocument()));
                         items.add(dc.getDocument().toObject(videos.class));
 
-
                     }
                     adapter.notifyDataSetChanged();
                     if(PD.isShowing())

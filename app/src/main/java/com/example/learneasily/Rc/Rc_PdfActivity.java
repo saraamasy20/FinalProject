@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.learneasily.Adapter.Assignment_adapter;
+import com.example.learneasily.Adapter.Courses_adapter;
 import com.example.learneasily.Adapter.Pdf_adapter;
 import com.example.learneasily.Add.Add_AssignmentActivity;
 import com.example.learneasily.Add.Add_pdfActivity;
@@ -49,13 +50,16 @@ public class Rc_PdfActivity extends AppCompatActivity {
         pdf_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(Rc_PdfActivity.this , Add_pdfActivity.class);
+                String idt=getIntent().getStringExtra("idt");
+                intent.putExtra("idt",idt);
                 startActivity(intent);
             }
         });
 
         PD = new ProgressDialog(this);
-        PD.setCancelable(false);
+        PD.setCancelable(true);
         PD.setMessage("Please Wait The Information.... :)");
         PD.show();
         rv = findViewById(R.id.rc_pdf);
@@ -70,11 +74,12 @@ public class Rc_PdfActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
         Display_Pdf();
+        Deletepdf();
     }
 
     private void Display_Pdf() {
-        String uid = FirebaseAuth.getInstance().getUid();
-        db.collection("courses").document(uid).collection("pdf").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        String idt=getIntent().getStringExtra("idt");
+        db.collection("courses").document(idt).collection("pdfs").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
 
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
@@ -101,4 +106,18 @@ public class Rc_PdfActivity extends AppCompatActivity {
         });
     }
 
+    private void Deletepdf(){
+        adapter.setOnItemClckListener(new Pdf_adapter.OnItemClickListener() {
+      @Override
+    public void onItemClick(int position) {
+       }
+      @Override
+        public void onDeleteClick(int position) {
+     items.remove(position);
+       adapter.notifyItemRemoved(position);
+                                          }
+                                      }
+
+        );
+    }
 }

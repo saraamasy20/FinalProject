@@ -66,6 +66,7 @@ public class Add_coursesActivity extends AppCompatActivity {
        .add(info).addOnSuccessListener(documentReference ->
 
         {
+            info.put("uid",documentReference.getId());
 //            Toast.makeText(Add_coursesActivity.this ,documentReference.getId(),Toast.LENGTH_SHORT).show();
 //            Intent i=new Intent(Add_coursesActivity.this, Task_of_CoursesActivity.class);
 //            i.putExtra("idcourse",documentReference.getId());

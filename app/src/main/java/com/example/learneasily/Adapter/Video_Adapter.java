@@ -1,9 +1,11 @@
 package com.example.learneasily.Adapter;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +16,29 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learneasily.R;
 import com.example.learneasily.edite.Video_edites;
 import com.example.learneasily.models.videos;
+import com.google.android.exoplayer2.MediaItem;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+
+import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
+import com.google.android.exoplayer2.extractor.ExtractorsFactory;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.TrackSelector;
+import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.android.exoplayer2.upstream.BandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 
 import java.util.ArrayList;
 
    public class Video_Adapter extends RecyclerView.Adapter<Video_Adapter.ViewHolder> {
+
 
 
 
@@ -46,63 +62,23 @@ import java.util.ArrayList;
 
             videos use_vidio = list_video.get(position);
             holder.name_video.setText(use_vidio.getTitle());
-             setVideoUrl(use_vidio,holder);
-
-
-        }
-
-        private void setVideoUrl(videos video,ViewHolder holder){
-         Uri videoUrl=video.getUrl();
-          MediaController mediaController=new MediaController(context);
-            mediaController.setAnchorView(holder.vview);
-
-
-holder.vview.setMediaController(mediaController);
-holder.vview.setVideoURI(videoUrl);
-
-holder.vview.requestFocus();
-holder.vview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-    @Override
-    public void onPrepared(MediaPlayer mediaPlayer) {
-        mediaPlayer.start();
-    }
-});
-holder.vview.setOnInfoListener(new MediaPlayer.OnInfoListener() {
-    @Override
-    public boolean onInfo(MediaPlayer mediaPlayer, int what, int extra) {
-        switch(what){
-            case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START:{
-
-                return true;
-            }
-            case MediaPlayer.MEDIA_INFO_BUFFERING_START:{
-
-                return true;
-            }
-            case MediaPlayer.MEDIA_INFO_BUFFERING_END:{
-
-                return true;
-            }
 
 
 
         }
 
+//       private void initPlayer(){
+//
+//           player=new SimpleExoPlayer.Builder(this).build();
+//           pv.setPlayer(player);
+//           MediaItem item=MediaItem.fromUri(videolink);
+//           player.setMediaItem(item);
+//           player.setPlayWhenReady(playerReady);
+//           player.seekTo(currentWindow,currentPosition);
+//           player.prepare();
+//       }
 
 
-
-
-        return false;
-    }
-});
-
-holder.vview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-    @Override
-    public void onCompletion(MediaPlayer mediaPlayer) {
-        mediaPlayer.start();
-    }
-});
-      }
 
 @Override
 public int getItemCount() {
@@ -113,14 +89,39 @@ public int getItemCount() {
 public  class  ViewHolder extends  RecyclerView.ViewHolder {
 
     public TextView name_video ;
-public VideoView vview;
+public PlayerView vview;
+    SimpleExoPlayer exoPlayer;
     public ViewHolder( View item_view){
         super(item_view);
-        name_video = item_view.findViewById(R.id.text_view_video);
-        vview=item_view.findViewById(R.id.vview);
+
+    }
+
+    public void SetExoplayer(Application application,String title,String url ){
+        name_video = itemView.findViewById(R.id.text_view_video);
+        vview=itemView.findViewById(R.id.vview);
+        name_video.setText(title);
+     try{
+//            BandwidthMeter bandwidthMeter= new DefaultBandwidthMeter();
+//         TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
+//         exoPlayer = ExoPlayerFactory.newSimpleInstance(this, trackSelector);
+//         Uri videouri = Uri.parse(url);
+//         DefaultHttpDataSourceFactory dataSourceFactory = new DefaultHttpDataSourceFactory("exoplayer_video");
+//         ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
+//         MediaSource mediaSource = new ExtractorMediaSource(videouri, dataSourceFactory, extractorsFactory, null, null);
+//         vview.setPlayer(exoPlayer);
+//         exoPlayer.prepare(mediaSource);
+//         exoPlayer.setPlayWhenReady(true);
+
+     } catch (Exception e) {
+         Log.e("TAG", "Error : " + e.toString());
+     }
+     }
+
+
+
     }
 
 }
-}
+//}
 
 

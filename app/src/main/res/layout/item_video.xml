@@ -24,10 +24,12 @@
      android:layout_height="wrap_content"
      android:orientation="vertical">
 
-    <VideoView
+    <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/vview"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+       app:use_controller="true"
+        app:resize_mode="fill"
         />
 
      <RelativeLayout

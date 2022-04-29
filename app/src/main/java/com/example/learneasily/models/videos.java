@@ -4,11 +4,11 @@ import android.net.Uri;
 
 public class videos {
     String title, id;
-Uri url;
+String url;
     public videos() {
     }
 
-    public videos(String title, String id, Uri url) {
+    public videos(String title, String id, String url) {
         this.title = title;
         this.id = id;
         this.url = url;
@@ -30,11 +30,11 @@ Uri url;
         this.id = id;
     }
 
-    public Uri getUrl() {
+    public String getUrl() {
         return url;
     }
 
-    public void setUrl(Uri url) {
+    public void setUrl(String url) {
         this.url = url;
     }
 
